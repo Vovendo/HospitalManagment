@@ -1,0 +1,13 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-into-patient
+      author: vladimir
+      changes:
+        - sql:
+            dbms: 'postgresql'
+            sql: |
+              insert into patient (uuid, first_name, last_name, patronymic, date_of_birth) 
+              values
+              ('9c173e10-6520-3ed2-b295-155b9a52d43d', 'Oleg', 'Ivanov', 'Ivanovich', '2001-05-13'),
+              ('ac3f784a-1147-3ff4-9e3d-1bb898306124', 'Vladimir', 'Ignatov', 'Vladimirovich', '2001-06-14'),
+              ('28fe5ee3-8a26-33cc-b694-7b4844b78b48', 'Kirill', 'Kozlov', 'Sergeevich', '2001-07-15')

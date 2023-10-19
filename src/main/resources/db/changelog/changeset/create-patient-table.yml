@@ -1,0 +1,29 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-patient
+      author: vladimir
+      changes:
+        - createTable:
+            tableName: patient
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: first_name
+                  type: varchar(100)
+              - column:
+                  name: last_name
+                  type: varchar(100)
+              - column:
+                  name: patronymic
+                  type: varchar(100)
+              - column:
+                  name: uuid
+                  type: varchar(200)
+              - column:
+                  name: date_of_birth
+                  type: date

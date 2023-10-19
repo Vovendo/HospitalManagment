@@ -1,0 +1,29 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-ticket
+      author: vladimir
+      changes:
+        - createTable:
+            tableName: ticket
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: date_time
+                  type: timestamp
+              - column:
+                  name: patient_id
+                  type: bigint
+                  constraints:
+                    references: patient(id)
+                    foreignKeyName: appointment_date_time_patient_fkey
+              - column:
+                  name: doctor_id
+                  type: bigint
+                  constraints:
+                    references: doctor(id)
+                    foreignKeyName: appointment_date_time_doctor_fkey

@@ -1,0 +1,23 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://localhost:8080/SoapService/addTicket"
+           targetNamespace="http://localhost:8080/SoapService/addTicket" elementFormDefault="qualified">
+
+    <xs:element name="addTicketsRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="doctorId" type="xs:long"/>
+                <xs:element name="numberOfAppointments" type="xs:int"/>
+                <xs:element name="date" type="xs:date"/>
+                <xs:element name="durationOfAppointments" type="xs:int"/>
+                <xs:element name="hourOfStart" type="xs:int"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="addTicketsResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="response" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
